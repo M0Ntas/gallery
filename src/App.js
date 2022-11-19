@@ -1,11 +1,22 @@
-import './App.css';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 
-function App() {
+import Header from './components/Header/Header';
+import Store from './components/Store/Store';
+import About from './components/About/About';
+import Contacts from './components/Contacts/Contacts';
+import Gallery from './components/Gallery/Gallery';
+
+export default function App() {
   return (
-    <div className="App">
-      Hello World1
+    <div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Gallery />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/info" element={<About />} />
+        <Route path="/contacts" element={<Contacts />} />
+      </Routes>
     </div>
   );
 }
-
-export default App;

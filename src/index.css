@@ -1,13 +1,31 @@
+@font-face {
+  font-family: "Steelfish";
+  font-style: normal;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Steelfish"),
+  url("fonts/steelfish bd.otf") format("woff2"),
+  /*  !* Если браузер не поддерживает woff2, загрузит woff *!*/
+  url("fonts/steelfish bd.otf") format("woff");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Steelfish', sans-serif;
+  font-size: 24px;
+  line-height: 29px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
