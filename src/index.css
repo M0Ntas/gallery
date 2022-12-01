@@ -9,6 +9,17 @@
   url("fonts/steelfish bd.otf") format("woff");
 }
 
+@font-face {
+  font-family: "Helvetica Neue";
+  font-style: normal;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Helvetica Neue"),
+  url("fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"),
+    /*  !* Если браузер не поддерживает woff2, загрузит woff *!*/
+  url("fonts/HelveticaNeueCyr-Roman.woff") format("woff");
+}
+
 body {
   margin: 0;
   font-family: 'Steelfish', sans-serif;

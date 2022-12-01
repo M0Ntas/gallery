@@ -1,0 +1,79 @@
+.contacts-block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 42px;
+}
+
+.contacts-form {
+    max-width: 537px;
+    width: 100%;
+}
+
+.form {
+
+}
+
+.send-button {
+    font-family: "Steelfish", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 18px 45px;
+    background: #000;
+    color: #FFF;
+    margin-top: 25px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.text-form {
+    width: 100%;
+    margin-top: 50px;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.info-mail {
+    font-family: 'Steelfish', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 8px 0 0;
+}
+
+.icon-block {
+    text-decoration: none;
+    margin-top: 30px;
+}
+
+.social-buttons {
+    cursor: pointer;
+    margin-right: 45px;
+}
+
+.send-button:hover {
+    background: #000000db;
+}
+
+.check-box-block {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 8px;
+}
+
+.contacts-form-title {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 29px;
+    margin-bottom: 60px;
+}
