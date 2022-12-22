@@ -23,6 +23,19 @@
     cursor: pointer;
 }
 
+.active-route {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000;
+    text-decoration: none;
+    padding: 5px 0;
+    border: 2px solid #FFF;
+    background: none;
+    cursor: pointer;
+    border-bottom: 2px solid #000000;
+}
+
 .header-button:hover {
     border-bottom: 2px solid #000000;
 }

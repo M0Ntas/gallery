@@ -1,0 +1,82 @@
+.store-card {
+    width: 480px;
+    height: 640px;
+    cursor: pointer;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.image {
+    width: 100%;
+}
+
+.card-hover {
+    position: relative;
+    top: -645px;
+    height: 100%;
+    transition: opacity 1s ease-out;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.card-hover:hover {
+    opacity: 1;
+}
+
+.card-hover-active {
+    position: relative;
+    top: -645px;
+    height: 100%;
+    transition: opacity 1s ease-out;
+    opacity: 1;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-info {
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.line {
+    width: 67px;
+    height: 5px;
+    background: #FFFFFF;
+    margin-top: 20px;
+}
+
+.card-title {
+    font-size: 64px;
+    line-height: 77px;
+}
+
+.card-year {
+    font-size: 36px;
+    line-height: 43px;
+}
+
+.card-size {
+     font-size: 48px;
+     line-height: 58px;
+}
+
+
+
+.card-cost {
+
+    font-size: 48px;
+    line-height: 58px;
+}

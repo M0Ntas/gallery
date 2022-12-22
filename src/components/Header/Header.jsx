@@ -1,5 +1,5 @@
 import './styles.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Logo from '../../assets/images/Logo.svg';
 
 const links = [
@@ -32,9 +32,13 @@ const Header = () => {
       <div className={'container'}>
         <div className={'header-block'}>
           {links.map((i) => (
-            <Link key={i.name} to={i.pathName} className={`header-button${i.style ?? ''}`}>
+            <NavLink
+              key={i.name}
+              to={i.pathName}
+              className={(navData) => (navData.isActive ? `active-route${i.style ?? ''}` : `header-button${i.style ?? ''}`)}
+            >
               {i.name}
-            </Link>
+            </NavLink>
           ))}
         </div>
       </div>
