@@ -1,31 +1,65 @@
-import { Box, FormControlLabel, Input, Radio, RadioGroup } from '@mui/material';
+import {useRef} from 'react';
+import emailjs from '@emailjs/browser';
+import { Box, Input } from '@mui/material';
 import Textarea from '@mui/joy/Textarea';
+import './styles.css';
 
 const ContactForm = () => {
+  const form = useRef();
+
+  const sendForm = async (e) => {
+    e.preventDefault();
+    let x = document.getElementById('name').value
+    let y = document.getElementById('email').value
+    if (x.length !== 0 && y.length !== 0){
+    emailjs.sendForm('service_xxagcmp', 'template_5skxofc', form.current, 'Fs5LVlfW4Er9H9RDd').then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+    document.getElementsByClassName("form")[0].reset()
+    }
+
+  };
+
+
   return (
-    <form className={'form'}>
+    <form ref={form} className={'form'} onSubmit={sendForm}>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
-        <Input placeholder={'Имя'} />
-        <Input type={'email'} placeholder={'Электронная почта'} />
-        <Input placeholder={'Телефон'} />
+        <Input id={'name'} name={'name'} type={'text'} placeholder={'Имя'} />
+        <Input id={'email'} name={'email'} type={'email'} placeholder={'Электронная почта'} />
+        <Input name={'phone'} type={'phone'} placeholder={'Телефон'} />
         <Box sx={{ maxWidth: '327px', width: '100%' }}>
           <div className={'check-box-block'}>Выберите удобный способ связи для Вас:</div>
-          <RadioGroup aria-labelledby="demo-radio-buttons-group-label" defaultValue="Позвонить" name="radio-buttons-group">
-            <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-              <FormControlLabel value="Позвонить" control={<Radio />} label="Позвонить" />
-              <FormControlLabel value="Написать" control={<Radio />} label="Написать" />
-            </Box>
-          </RadioGroup>
+          <div className={'options'}>
+            <div className="options-item">
+              <input className={'check-box-input'} name={'communication'} id={'call'} checked value={'Позвонить'} type={'radio'} />
+              <label className={'check-box-label'} htmlFor={'call'}>
+                <span>Позвонить</span>
+              </label>
+            </div>
+            <div className="options-item">
+              <input className={'check-box-input'} name={'communication'} id={'write'} value={'Написать'} type={'radio'} />
+              <label className={'check-box-label'} htmlFor={'write'}>
+                <span>Написать</span>
+              </label>
+            </div>
+          </div>
         </Box>
+        <input style={{ display: 'none' }} name={'date'} value={new Date().toLocaleString()} />
       </Box>
       <Textarea
+        name={'massage'}
         sx={{ width: '100%', '--Textarea-radius': 0, fontFamily: 'Helvetica Neue, sans-serif', marginTop: '8px' }}
         placeholder={'Текст сообщения'}
         minRows={3}
       />
-      <div onClick={(e) => e.preventDefault()} className={'send-button'}>
+      <button type={'submit'} className={`send-button`}>
         Отправить
-      </div>
+      </button>
       <p className={'text-form'}>
         Важно!
         <br />

@@ -1,6 +1,7 @@
 .store-card {
-    width: 480px;
-    height: 640px;
+    width: 100%;
+    max-width: 475px;
+    height: 633px;
     cursor: pointer;
     overflow: hidden;
     text-decoration: none;
@@ -12,7 +13,7 @@
 
 .card-hover {
     position: relative;
-    top: -645px;
+    top: -637px;
     height: 100%;
     transition: opacity 1s ease-out;
     left: 0;

@@ -38,8 +38,8 @@ const Contacts = () => {
           <ContactForm />
         </div>
         <div className={'contacts-info'}>
-          <img alt={'info-photo'} src={Img} />
-          <p className={'info-mail'}>Электронная почта: mlina.artist@gmailcom</p>
+          <img alt={'info'} src={Img} />
+          <p className={'info-mail'}>Электронная почта: mlina.artist@gmail.com</p>
           <div className={'icon-block'}>
             {icons.map((i) => (
               <a className={'social-buttons'} target={'_blank'} href={i?.to}>

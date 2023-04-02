@@ -5,17 +5,33 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 90vh;
+    height: calc(100vh - 86px);
 }
 
 .photo-block {
     width: 100%;
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+    height: calc(100vh - 86px);
 }
 
 .main-photo {
     width: 100%;
     grid-column: 1;
+    object-fit: cover!important;
+    height: calc(100vh - 86px)!important;
+}
+
+.second-block {
+    height: calc(100vh - 86px)!important;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.second-block::-webkit-scrollbar {
+    width: 0;
 }
 
 .second-photo {

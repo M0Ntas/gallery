@@ -9,6 +9,7 @@ const CardPage = () => {
   const [photo, setPhoto] = useState([]);
   const [active, setActive] = useState(0);
 
+
   useEffect(() => {
     if (item) {
       setPhoto(item.img);
@@ -26,7 +27,7 @@ const CardPage = () => {
           {photo && (
             <div className={'photo-block'}>
               {photo[active] && <img alt={'main'} src={`/painting/${photo[active]}`} className={'main-photo'} />}
-              <div>
+              <div className={'second-block'}>
                 {photo.map((i, index) => (
                   <img onClick={() => setActive(index)} key={i} alt={'second'} className={'second-photo'} src={`/painting/${i}`} />
                 ))}

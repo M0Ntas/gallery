@@ -27,6 +27,20 @@
     width: fit-content;
 }
 
+.send-button-disabled {
+    font-family: "Steelfish", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 18px 45px;
+    background: #00000080;
+    color: #FFF;
+    margin-top: 25px;
+    cursor: no-drop;
+    width: fit-content;
+}
+
 .text-form {
     width: 100%;
     margin-top: 50px;

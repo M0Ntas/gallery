@@ -13,11 +13,11 @@
   font-family: "Helvetica Neue";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   /* Браузер сначала попробует найти шрифт локально */
-  src: local("Helvetica Neue"),
-  url("fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"),
-    /*  !* Если браузер не поддерживает woff2, загрузит woff *!*/
-  url("fonts/HelveticaNeueCyr-Roman.woff") format("woff");
+  src:
+  /*url("fonts/Helvetica Neue Condensed Black.ttf") format("truetype")*/
+  url("fonts/Helvetica Neue Condensed Bold (3).ttf") format("truetype")
 }
 
 body {
