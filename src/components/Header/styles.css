@@ -14,6 +14,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
+    letter-spacing: 0.05em;
     line-height: 29px;
     color: #000;
     text-decoration: none;
@@ -30,6 +31,7 @@
     color: #000;
     text-decoration: none;
     padding: 5px 0;
+    letter-spacing: 0.05em;
     border: 2px solid #FFF;
     background: none;
     cursor: pointer;
@@ -38,4 +40,5 @@
 
 .header-button:hover {
     border-bottom: 2px solid #000000;
+    letter-spacing: 0.05em;
 }
